@@ -1,0 +1,59 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Cormorant Garamond", ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+
+  --color-eywa-dark: #2B231D;
+  --color-eywa-dark-elevated: #3A3029;
+  --color-eywa-light: #F6F0E7;
+  --color-eywa-gold: #DDA76A;
+  --color-eywa-gold-dim: #9E7D58;
+  --color-eywa-brown: #4A3C31;
+  --color-eywa-accent: #EACC9F;
+
+  --color-text-primary: #F6F0E7;
+  --color-text-muted: #BDB0A3;
+  --color-text-light: #F6F0E7;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-eywa-dark);
+  color: var(--color-text-primary);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6, .serif {
+  font-family: var(--font-serif);
+}
+
+.bg-dark {
+  background-color: var(--color-eywa-dark);
+  color: var(--color-eywa-light);
+}
+
+.text-gold {
+  color: var(--color-eywa-gold);
+}
+
+/* Oval image mask */
+.oval-mask {
+  mask-image: radial-gradient(ellipse at center, black 65%, transparent 100%);
+  -webkit-mask-image: radial-gradient(ellipse at center, black 65%, transparent 100%);
+}
+
+.glass-panel {
+  background: rgba(15, 11, 9, 0.4);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(207, 161, 95, 0.1);
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
